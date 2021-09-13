@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  express_ts:
+    container_name: express_ts
+    build: .
+    environment:
+      - NODE_ENV=prod
+    volumes:
+      - ./src:/app/src
+    expose:
+      - '1337'
+    ports:
+      - '1337:1337'
